@@ -8,6 +8,7 @@
 body {
   background-color: #fdfeff;
   color: black;
+  overflow-x: hidden;
 }
 .container {
   margin: 2% 5%;
@@ -118,13 +119,20 @@ h2 {
   font-size: 35px;
   font-weight: 900;
 }
+
 .Pricing {
-  position: absolute;
+  /* position: fixed;
   left: 0;
-  right: 0;
+  right: 0; */
   margin-top: 80px;
-  height: 900px;
+  padding-bottom: 100px;
   background: linear-gradient(to right bottom, #62c0ec, #0566ea);
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
 }
 .Pricing h2 {
   font-size: 40px;
@@ -181,7 +189,8 @@ i {
 }
 
 .customer-heading {
-  margin-top: 100%;
+  /* margin-top: 100%; */
+  margin-top: 50px;
   text-align: center;
   padding-left: 100px;
   padding-right: 100px;
@@ -211,16 +220,23 @@ i {
 }
 
 .Hosting-section {
-  position: absolute;
+  /* position: absolute;
   left: 0;
-  right: 0;
+  right: 0; */
   background-image: url(../images/footer-bg.svg);
   margin-top: 100px;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  padding: 20px;
 }
 
 .hosting-body {
   display: grid;
-  grid-template-columns: 80% 20%;
+  grid-template-columns: 5fr 1fr;
   align-items: center;
   justify-content: space-between;
   padding: 50px;
@@ -247,12 +263,12 @@ i {
 }
 
 .footer-section {
-  margin-top: 40%;
+  margin-top: 80px;
 }
 
 .footer-body {
   display: grid;
-  grid-template-columns: 400px 1fr 1fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
 }
 .Icons h3 {
   font-size: 25px;
@@ -276,4 +292,62 @@ i {
 }
 .Iconss img {
   width: 30px;
+}
+
+/* ******************************** */
+
+@media (max-width: 768px) {
+  .hero-section,
+  .testing-section,
+  .technical-section,
+  .services-section,
+  .card,
+  .customer-card-section {
+    grid-template-columns: 1fr;
+  }
+  .list {
+    display: none;
+  }
+  .Right-hero img {
+    margin-top: 30px;
+    width: 100%;
+  }
+  .Left-testing img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .Pricing-section {
+    grid-template-columns: 1fr;
+  }
+  .customer-heading {
+    padding: 0;
+    text-align: center;
+  }
+  .footer-body {
+    text-align: center;
+    grid-template-columns: 1fr;
+  }
+  .Icons,
+  .Iconss {
+    margin-top: 30px;
+  }
+  .Iconss ul {
+    display: flex;
+    justify-content: center;
+  }
+  .Hosting-section {
+    height: 500px;
+  }
+  .hosting-body {
+    grid-template-columns: 1fr;
+  }
+  .hosting-body h1 {
+    font-size: 40px;
+  }
+  .hosting-body h4 {
+    margin-top: 20px;
+    font-size: 15px;
+  }
 }
