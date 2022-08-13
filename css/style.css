@@ -315,11 +315,25 @@ i {
   .Left-testing img {
     width: 100%;
   }
+  .Left-hero {
+    order: 2;
+  }
+  .Left-hero,
+  .Right-testing,
+  h1 {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 35px;
+  }
+  br {
+    display: none;
+  }
 }
 
 @media (max-width: 768px) {
   .Pricing-section {
     grid-template-columns: 1fr;
+    padding: 70px;
   }
   .customer-heading {
     padding: 0;
@@ -338,13 +352,14 @@ i {
     justify-content: center;
   }
   .Hosting-section {
-    height: 500px;
+    height: 600px;
+    padding-bottom: 20px;
   }
   .hosting-body {
     grid-template-columns: 1fr;
   }
   .hosting-body h1 {
-    font-size: 40px;
+    font-size: 30px;
   }
   .hosting-body h4 {
     margin-top: 20px;
