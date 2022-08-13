@@ -333,7 +333,7 @@ i {
 @media (max-width: 768px) {
   .Pricing-section {
     grid-template-columns: 1fr;
-    padding: 70px;
+    padding: 50px;
   }
   .customer-heading {
     padding: 0;
@@ -352,7 +352,7 @@ i {
     justify-content: center;
   }
   .Hosting-section {
-    height: 600px;
+    height: 500px;
     padding-bottom: 20px;
   }
   .hosting-body {
